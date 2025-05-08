@@ -31,9 +31,7 @@ export const Web3Context = createContext<{
   isCrossmintUser: false,
 })
 
-// Updated contract address from the newly deployed EnhancedDAO contract
-const CONTRACT_ADDRESS = "0x19c31fc77be4ffaa446cc14e6bb91158e6193f47"
-const APOTHEM_CHAIN_ID = 51
+
 
 export function Web3Provider({ children }: { children: ReactNode }) {
   const [provider, setProvider] = useState<ethers.BrowserProvider | null>(null)
