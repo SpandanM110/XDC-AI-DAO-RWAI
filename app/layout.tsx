@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "XDC DAO Dashboard",
-  description: "Dashboard for a Decentralized Autonomous Organization on XDC blockchain",
-    generator: 'v0.dev'
+  description: "Dashboard for a Decentralized Autonomous Organization on XDC blockchain with AI governance",
+   
 }
 
 export default function RootLayout({
