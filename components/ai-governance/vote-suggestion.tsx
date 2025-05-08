@@ -27,7 +27,12 @@ export function VoteSuggestion({ proposalId, description }: VoteSuggestionProps)
   const [suggestionProgress, setSuggestionProgress] = useState(0)
 
 
- 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    if (params.get("autoSuggest") === "true" && isAgentEnabled && !suggestion && !loading) {
+      handleGetSuggestion()
+    }
+  }, [isAgentEnabled])
 
   // Simulate progress during suggestion generation
   useEffect(() => {

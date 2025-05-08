@@ -8,7 +8,14 @@
 import * as LocalAnalysisEngine from "./local-analysis-engine"
 
 // XDC-specific keywords that might indicate higher risk
-
+const XDC_HIGH_RISK_KEYWORDS = [
+  "network upgrade",
+  "consensus change",
+  "protocol modification",
+  "bridge security",
+  "cross-chain",
+  "mainnet deployment",
+]
 
 const XDC_MEDIUM_RISK_KEYWORDS = [
   "testnet",
