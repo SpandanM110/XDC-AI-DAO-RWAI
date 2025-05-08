@@ -19,7 +19,24 @@ import {
   type TransactionExplanation,
 } from "@/app/actions/gemini-actions"
 
-
+type AgentContextType = {
+  isAgentEnabled: boolean
+  isAgentProcessing: boolean
+  isUsingFallback: boolean
+  agentError: string | null
+  enableAgent: () => Promise<void>
+  disableAgent: () => void
+  analyzeProposal: (proposalId: string, description: string) => Promise<AnalysisResult>
+  suggestVote: (proposalId: string, description: string) => Promise<VoteSuggestion>
+  executeProposalWithAgent: (proposalId: string) => Promise<boolean>
+  retryConnection: () => Promise<void>
+  // New AI capabilities
+  generateProposalDraft: (topic: string, context?: string) => Promise<string>
+  summarizeDAO: (daoAddress: string, daoInfo: any) => Promise<DAOSummary>
+  explainTransaction: (txHash: string, txData: any) => Promise<TransactionExplanation>
+  suggestDAOImprovements: (daoAddress: string, daoInfo: any) => Promise<string[]>
+  generateDAODescription: (purpose: string, goals: string[]) => Promise<string>
+}
 
 const AgentContext = createContext<AgentContextType>({
   isAgentEnabled: false,

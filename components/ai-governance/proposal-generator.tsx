@@ -28,27 +28,7 @@ export function ProposalGenerator() {
       return
     }
 
-    try {
-      setIsGenerating(true)
-      const proposal = await generateProposalDraft(topic, context)
-      setGeneratedProposal(proposal)
-    } catch (error: any) {
-      toast({
-        title: "Error Generating Proposal",
-        description: error.message || "Failed to generate proposal",
-        variant: "destructive",
-      })
-    } finally {
-      setIsGenerating(false)
-    }
-  }
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedProposal)
-    toast({
-      title: "Copied to Clipboard",
-      description: "Proposal text has been copied to your clipboard",
-    })
+    
   }
 
   if (!isAgentEnabled) {
