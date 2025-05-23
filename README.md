@@ -1,4 +1,4 @@
-# 🏛️ EnhancedDAO
+# 🏛️ EnhancedDAO on XDC 
 
 A powerful and extensible Solidity smart contract that enables users to **create and manage Decentralized Autonomous Organizations (DAOs)** with proposal voting, funding, and membership functionality — all with a one-DAO-per-creator constraint.
 
@@ -424,10 +424,11 @@ Check out the full working app here:
 
 ## ❤️ Built With
 
-* [Solidity](https://soliditylang.org/)
-* [Hardhat](https://hardhat.org/)
-* [IPFS](https://ipfs.tech/)
-* [Ethereum](https://ethereum.org/)
+Next JS
+Tailwind
+Solidity
+Metamask
+Web3Auth
+Remix IDE (Contracts)
 
-```
 
